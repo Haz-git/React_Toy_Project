@@ -5,9 +5,7 @@ import styled from 'styled-components';
 //Components:
 import ChildContainer from './ChildContainer';
 
-const MainContainer = styled.div`
-    border: 1px solid black;
-`;
+const MainContainer = styled.div``;
 
 const MainInput = styled.input`
     height: 2rem;
