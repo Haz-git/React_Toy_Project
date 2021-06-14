@@ -10,7 +10,7 @@ const ChildContainer = () => {
                 <h2>Child 1</h2>
             </div>
             This is the direct child container to Input Parent Container: I shouldn't hold the first
-            name and last name!
+            name and last name!The input is passed through me, I don't have any props.
             <ChildContainerSub />
         </div>
     );
