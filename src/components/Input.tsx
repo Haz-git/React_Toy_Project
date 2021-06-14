@@ -1,4 +1,5 @@
-import React, { useState, createContext } from 'react';
+import * as React from 'react';
+import { useState, createContext } from 'react';
 import styled from 'styled-components';
 
 //Components:
@@ -13,6 +14,9 @@ const MainInput = styled.input`
     width: 4rem;
 `;
 
+//We should place the context object outside of the JSX function because we'll want to import this to take advantage of useContext()
+export const nameContext = createContext({ firstName: '', lastName: '' });
+
 const Input = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -26,7 +30,6 @@ const Input = () => {
     };
 
     //We've created a context object here with a default value of an empty object.
-    const nameContext = createContext({});
 
     return (
         //We wrap the context provider over our parent function, whose state we want to pass down.
