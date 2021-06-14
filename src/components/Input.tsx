@@ -36,7 +36,7 @@ const Input = () => {
         <nameContext.Provider value={{ firstName, lastName }}>
             <MainContainer>
                 <div>
-                    <h1>Input Parent Container</h1>
+                    <h2>Input Parent Container</h2>
                 </div>
                 First Name:
                 <MainInput onChange={handleFirstName} />

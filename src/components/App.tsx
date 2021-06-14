@@ -9,7 +9,7 @@ import Input from './Input';
 const App = () => {
     return (
         <div>
-            Context API Test
+            <h1>Context API Test</h1>
             <Input />
         </div>
     );
