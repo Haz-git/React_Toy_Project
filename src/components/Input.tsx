@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, createContext } from 'react';
 import styled from 'styled-components';
 
 //Components:
@@ -25,20 +25,29 @@ const Input = () => {
         setLastName(e.target.value);
     };
 
+    //We've created a context object here with a default value of an empty object.
+    const nameContext = createContext({});
+
     return (
-        <MainContainer>
-            <div>
-                <h1>Input Parent Container</h1>
-            </div>
-            First Name:
-            <MainInput onChange={handleFirstName} />
-            Last Name:
-            <MainInput onChange={handleLastName} />
-            <div>
-                This is the state held by input:
-                <div>{firstName + ' ' + lastName}</div>
-            </div>
-        </MainContainer>
+        //We wrap the context provider over our parent function, whose state we want to pass down.
+        <nameContext.Provider value={{ firstName, lastName }}>
+            <MainContainer>
+                <div>
+                    <h1>Input Parent Container</h1>
+                </div>
+                First Name:
+                <MainInput onChange={handleFirstName} />
+                Last Name:
+                <MainInput onChange={handleLastName} />
+                <div>
+                    This is the state held by input:
+                    <div>{firstName + ' ' + lastName}</div>
+                </div>
+                <div>
+                    <ChildContainer />
+                </div>
+            </MainContainer>
+        </nameContext.Provider>
     );
 };
 
