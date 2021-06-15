@@ -15,22 +15,27 @@ const StopWatch = () => {
 
     const startHandler = () => {
         if (timerIdRef.current) return;
-        timerIdRef.current = window.setInterval(() => setCount((c) => c + 1), 1000);
+        timerIdRef.current = window.setInterval(() => setCount(count + 1), 1000);
     };
 
     const stopHandler = () => {
-        clearInterval(timerIdRef.current);
+        window.clearInterval(timerIdRef.current);
         timerIdRef.current = 0;
     };
 
     useEffect(() => {
-        return () => clearInterval(timerIdRef.current);
+        return () => window.clearInterval(timerIdRef.current);
     });
 
     return (
         <MainContainer>
             <div>
                 <h1>StopWatch</h1>
+                <div>Timer: {count}s</div>
+                <div>
+                    <button onClick={startHandler}>Start</button>
+                    <button onClick={stopHandler}>Stop</button>
+                </div>
             </div>
         </MainContainer>
     );
