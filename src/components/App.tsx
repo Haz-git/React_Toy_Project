@@ -4,6 +4,8 @@ import styled from 'styled-components';
 //Components:
 import Input from './Input';
 import LazyMain from './lazy_components/LazyMain';
+import UseRefMain from './useref_example/UseRefMain';
+import useRefMain from './useref_example/UseRefMain';
 
 //Styles:
 const TestContainer = styled.div`
@@ -22,6 +24,10 @@ const App = () => {
             <TestContainer>
                 <h1>React Lazy + Suspense Test</h1>
                 <LazyMain />
+            </TestContainer>
+            <TestContainer>
+                <h1>useRef Example</h1>
+                <UseRefMain />
             </TestContainer>
         </div>
     );
