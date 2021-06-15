@@ -6,6 +6,7 @@ import Input from './Input';
 import LazyMain from './lazy_components/LazyMain';
 import UseRefMain from './useref_example/UseRefMain';
 import StateButton from './useref_example/StateButton';
+import StopWatch from './useref_example/StopWatch';
 
 //Styles:
 const TestContainer = styled.div`
@@ -29,6 +30,9 @@ const App = () => {
                 <h1>useRef() Example</h1>
                 <UseRefMain />
                 <StateButton />
+                <div>
+                    <StopWatch />
+                </div>
             </TestContainer>
         </div>
     );
