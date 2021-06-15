@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Input from './Input';
 import LazyMain from './lazy_components/LazyMain';
 import UseRefMain from './useref_example/UseRefMain';
-import useRefMain from './useref_example/UseRefMain';
+import StateButton from './useref_example/StateButton';
 
 //Styles:
 const TestContainer = styled.div`
@@ -26,8 +26,9 @@ const App = () => {
                 <LazyMain />
             </TestContainer>
             <TestContainer>
-                <h1>useRef Example</h1>
+                <h1>useRef() Example</h1>
                 <UseRefMain />
+                <StateButton />
             </TestContainer>
         </div>
     );
