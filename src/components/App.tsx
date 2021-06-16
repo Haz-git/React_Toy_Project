@@ -7,6 +7,7 @@ import LazyMain from './lazy_components/LazyMain';
 import UseRefMain from './useref_example/UseRefMain';
 import StateButton from './useref_example/StateButton';
 import StopWatch from './useref_example/StopWatch';
+import MainPortal from './portal_example/MainPortal';
 
 //Styles:
 const TestContainer = styled.div`
@@ -33,6 +34,10 @@ const App = () => {
                 <div>
                     <StopWatch />
                 </div>
+            </TestContainer>
+            <TestContainer>
+                <h1>Portal Test</h1>
+                <MainPortal />
             </TestContainer>
         </div>
     );
